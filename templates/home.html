@@ -4,8 +4,55 @@
 <style>
     body{
         background-color: #232946;
-        overflow:scroll ;
+        overflow-x: hidden;
     }
+    @import url(./Montserrat.zip);
+
+    li,a,button{
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #edf0f1;
+      text-decoration: none;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 15%;
+        
+    }
+    .nav{
+      color: aliceblue;
+      margin-top: -70px;
+      transform: translateX(510px);
+    }
+    .logo{
+        cursor: pointer;
+
+    }
+  .nav-links a:link{
+    color:rgba(240, 255, 255, 0.87) ;
+  }
+
+    .nav-links{
+        color: azure;
+        list-style: none;
+        font-weight: 1000;
+        
+    }
+    .nav-links li{
+        color: whitesmoke;
+        display: inline-block;
+        margin-left: 80px;
+        font-size: 49px;
+
+    }
+
+    .nav-links a:hover{
+        color: #0088a9;
+    }
+
     
     .steps{
       margin-bottom: 80px;
@@ -158,211 +205,239 @@
 
     @import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600&family=Montserrat:ital,wght@0,400;1,400;1,500&display=swap");
 
-body {
-  background-color: #232946;
- 
-}
-.heading {
-  margin-left: 180px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px;
-  font-size: 30px;
-  color: #eebbc3;
-}
-.intro h1 {
-  margin-right: -15px;
+    body {
+      background-color: #232946;
+    }
+    .heading {
+      margin-left: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: -130px;
+      font-size: 30px;
+      color: #eebbc3;
+    }
+    .intro h1 {
+      margin-right: -15px;
+    }
+
+    .intro p {
+      width: 700px;
+      font-size: 22px;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 80px;
+    }
+
+    .about {
+      margin-top: 200px;
+      margin-left: 1000px;
+      font-size: x-large;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    }
+
+    .container-ig {
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 250px;
+      width: 280px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(1.5);
+      margin-top: 550px;
+      margin-left: 580px;
+      top: 200px;
+      transform: translateY(140px);
+      margin-left: 460px;
+    }
+    .select1 {
+      align-items: center;
+    }
+
+    a {
+      color: aliceblue;
+    }
+
+    p {
+      color: #b8c1ec;
+    }
+
+    .box {
+      padding: 1px 10px;
+      margin: 22px 90px;
+      min-width: 20vw;
+      align-self: center;
+      text-align: center;
+    }
+
+    .wlcm-img {
+      margin-left: 770px;
+      transform: translateY(-70px);
+      transform: scale(1.2);
+      margin-top: -250px;
+    }
+    .abtproj {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #b8c1ec;
+    }
+    .abt {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #eebbc3;
+    }
+    button {
+      background-color: #eebbc3;
+      border: 0px;
+    }
+    .igimg {
+      transform: scale(0.3);
+      margin-top: -200px;
+      position: relative;
+      right: 280px;
+      margin-left: 310px;
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .s3{
+      height: 20vh;
+    }
+
+    .s1 {
+      margin-top: 100px;
+      margin-left: 100px;
+    }
+
+    .reveal{
+      position: relative;
+      transform: translateY(30px);
+      opacity: 0;
+      transition: 0.2s all ease;
+    }
+
+    .reveal.active{
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .login{
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      bottom: 60px;
+      background-color: #eebbc3;
+      width: 350px;
+      height: 50px;
+      transform: translate(550px,-150px);
+      margin-left: -120px;
+    }
+    .names{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-left: 230px;
+        font-size: x-large;
+        
+    }
+    .name{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+        
+        margin-top: 40px;
+    }
+.name li{
+  color: #232946;
 }
 
-.intro p {
-  width: 700px;
-  font-size: larger;
-  font-family: 'Montserrat', sans-serif;
-}
+    .details{
+        background-color: #b8c1ec;
+        display: flex;
+        height: 100px;
+        width: 110vw;
+        margin-left: -10px;
+        transform:translate(-8px,10px);
+        
+        
+    }
+    .details ul{
+        margin-left: 100px;
+        margin-bottom: 40px;
+    }
 
-.about {
-  margin-top: 200px;
-  margin-left: 1000px;
-  font-size: x-large;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
+    .acc{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-left: 20px;
+        font-size: x-large;
+    }
+    .email{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+        margin-top: 40px;
+        
+    }
+    .phone{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-left: 20px;
+        font-size: x-large;
 
-.container-ig {
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 250px;
-  width: 280px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1.5);
-  margin-top: 550px;
-  margin-left: 580px;
-  top: 200px;
-  transform: translateY(140px);
-}
-.select1 {
-  align-items: center;
-}
+    }
+    .numbers{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+        margin-top: 40px;
 
-a {
-  color: aliceblue;
-}
-
-p {
-  color: #b8c1ec;
-}
-
-.box {
-  padding: 1px 10px;
-  margin: 22px 90px;
-  min-width: 20vw;
-  align-self: center;
-  text-align: center;
-}
-
-.wlcm-img {
-  margin-left: 900px;
-  transform: translateY(-70px);
-  transform: scale(1.5);
-  margin-top: -250px;
-}
-.abtproj {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #b8c1ec;
-}
-.abt {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #eebbc3;
-}
-button {
-  background-color: #eebbc3;
-  border: 0px;
-}
-.igimg {
-  transform: scale(0.3);
-  margin-top: -300px;
-  position: relative;
-  right: 280px;
-}
-
-section {
-  width: 100vw;
-  height: 100vh;
-}
-
-.s3{
-  height: 20vh;
-}
-
-.s1 {
-  margin-top: 100px;
-  margin-left: 100px;
-}
-
-.reveal{
-  position: relative;
-  transform: translateY(30px);
-  opacity: 0;
-  transition: 0.2s all ease;
-}
-
-.reveal.active{
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.login{
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  bottom: 60px;
-  background-color: #eebbc3;
-  width: 350px;
-  height: 50px;
-  transform: translate(550px,-150px);
-}
-.names{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 230px;
-    font-size: x-large;
-}
-.name{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20px;
-    margin-top: 50px;
-}
-.details{
-    background-color: #b8c1ec;
-    display: flex;
-    height: 100px;
-    width: 100vw;
-    margin-left: -10px;
-    transform:translateY(10px);
+    }
     
-}
-.details ul{
-    margin-left: 200px;
-    margin-bottom: 40px;
-}
+    footer h1{
+        margin-left: 10px;
+        transform: translateY(20px);
+    }
 
-.acc{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 20px;
-    font-size: x-large;
-}
-.email{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20px;
-    margin-top: 50px;
+    footer{
+        margin-top: 420px;
+        width: 100vw;
+        margin-bottom: 0px;
+    }
+
+
+    footer li{
+        list-style: none;
+        margin-top: -10px;
+    }
     
-}
-.phone{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 20px;
-    font-size: x-large;
+    
 
-}
-.numbers{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20px;
-    margin-top: 50px;
+    a:visited{
+        color: #b8c1ec;
+    }
+    a:link{
+        color: black;
+    }
 
-}
- 
-footer h1{
-    margin-left: 10px;
-    margin-top:40px;
-}
+    a:hover{
+        color: hotpink;
+    }
 
-footer{
-    margin-top: 420px;
-    width: 100vw;
-    margin-bottom: 0px;
-    margin-left: 10px;
-}
+    a:active{
+        color: blue;
+    }
+    .btn{
+      background-color: mediumslateblue;
+      transition: 0.7s ease-in-out;
+      border-bottom: #753a88;
+    }
+    .btn:hover{
+      background-color:powderblue ;
+      transition: 0.7s all 0.3s ease;
+    }
+    .contact{
+      margin-top: 15px;
+    }
+    .s2 h1{
+      margin-left:-150px;
+    }
 
-
-footer li{
-    list-style: none;
-}
-
-a:visited{
-    color: #b8c1ec;
-}
-a:link{
-    color: black;
-}
-
-a:hover{
-    color: hotpink;
-}
-
-a:active{
-    color: blue;
-}
 
 </style>
 
@@ -374,6 +449,17 @@ a:active{
     <link rel="stylesheet" href="./stylesheets/nav.css" />
     <title>UI</title>
 </head>
+<header class="header">
+  
+  <nav class="nav">
+      <ul class="nav-links">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+      </ul>
+  </nav>
+  
+</header>
 
 <body>
     <section class="s1">
@@ -399,6 +485,7 @@ a:active{
         </div>
 
         <div class="wlcm-img">
+
             <img class="rlfk" src="{{ url_for('static', filename = 'realfake.png')}}" />
             <img class="igimg" src="{{ url_for('static', filename = 'Instagram_logo_2016.svg.png') }}" />
         </div>
@@ -484,21 +571,21 @@ a:active{
     </script>
 
     <footer class="details">
-        <h1>Contact Us :</h1>
+        <h1 class="contact">Contact Us :</h1>
         <ul class="name">
-            <li>Pratham Chellani</li>
-            <li>Dhruv Golani</li>
+            <li >Pratham Chellani</li><br>
+            <li >Dhruv Golani</li>
         </ul>
         <ul class="email">
             <li>
                 <a href="mailto: cyborgkiller1008@gmail.com">cyborgkiller1008@gmail.com</a>
-            </li>
+            </li><br>
             <li>
                 <a href="mailto: dhruvgolani0504@gmail.com">dhruvgolani0504@gmail.com</a>
             </li>
         </ul>
         <ul class="numbers">
-            <li><a href="tel:+919664590100"> +91 9664590100 </a></li>
+            <li><a href="tel:+919664590100"> +91 9664590100 </a></li><br>
             <li><a href="tel:+919825900160"> +91 9825900160 </a></li>
         </ul>
     </footer>

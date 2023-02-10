@@ -2,10 +2,10 @@ import instaloader
 from datetime import datetime
 from instagrapi import Client
 L = instaloader.Instaloader()
-username = input("Username: ")
-password = input("Password: ")
-profile = instaloader.Profile.from_username(L.context, username)
-L.login(username, password)
+username1 = input("Username: ")
+password1 = input("Password: ")
+profile = instaloader.Profile.from_username(L.context, username1)
+L.login(username1, password1)
 
 followers = profile.get_followers()
 followers_list = []
@@ -18,7 +18,7 @@ for following in followings:
     following_list.append(following.username)
 
 cl = Client()
-cl.login(username, password)
+cl.login(username1, password1)
 
 
 #====================================================================================================================

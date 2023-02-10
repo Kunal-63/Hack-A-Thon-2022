@@ -3,8 +3,8 @@ from datetime import datetime
 from instagrapi import Client
 L = instaloader.Instaloader()
 
-profile = instaloader.Profile.from_username(L.context, "fakelightning1")
-L.login("imop690", "#imop690")
+profile = instaloader.Profile.from_username(L.context, "jatinbachani333")
+L.login("fourth12342023", "fourth_1234")
 
 following_list = []
 followings = profile.get_followees()
@@ -12,7 +12,7 @@ for following in followings:
     following_list.append(following.username)
 
 cl = Client()
-cl.login("imop690", '#imop690')
+cl.login("fourth12342023", 'fourth_1234')
 
 #====================================================================================================================
 #====================================================================================================================
@@ -35,7 +35,7 @@ for j in following_list:
             timestamp2 = datetime.fromtimestamp(post2.date_local.timestamp())
             duration = timestamp2 - timestamp1
             print(abs(duration.days)," days")
-            if (abs(duration.days) <= 1):
+            if (abs(duration.days) == 1):
                 percent +=  0.2
 
 
@@ -50,10 +50,10 @@ for j in following_list:
             avg_likes = sum(likes1) / len(likes1)
             likes_followers_ration = avg_likes / int(dict["follower_count"])
             if (likes_followers_ration >= 0.33):
-                percent += 0.1
+                percent += 0.05
             elif(likes_followers_ration >= 0.2):
-                percent += 0.2
-        except:
+                percent += 0.1
+        except :
             pass
         
         try:
@@ -64,27 +64,26 @@ for j in following_list:
 
             follower_following_ratio = int(dict['follower_count']) / int(dict['following_count'])
             if (follower_following_ratio >= 0.5):
-                percent += 0.1
+                percent += 0.05
             elif (follower_following_ratio < 0.5 and follower_following_ratio >= 0.33):
-                percent += 0.2
+                percent += 0.1
             elif (follower_following_ratio < 0.33):
-                percent += 0.3
+                percent += 0.2
 
 
             media_follower_ratio = int(dict["media_count"]) / int(dict["follower_count"])
             if (media_follower_ratio >= 0.5):
-                percent += 0.1
+                percent += 0.05
             elif (media_follower_ratio > 0.8):
-                percent += 0.2
+                percent += 0.1
             elif (media_follower_ratio > 1):
-                percent += 0.3
+                percent += 0.2
 
 
             if (dict["biography"] == None) or (len(dict["biography"]) >= 125):
                     percent += 0.2
 
             
-
-            print("\n\n\n")
         except:
             pass
+    print(j," : ", percent)

@@ -3,18 +3,13 @@ from datetime import datetime
 from instagrapi import Client
 L = instaloader.Instaloader()
 
-profile = instaloader.Profile.from_username(L.context, "_kunaladwani_")
+profile = instaloader.Profile.from_username(L.context, "fakelightning1")
 L.login("imop690", "#imop690")
 
 followers = profile.get_followers()
 followers_list = []
 for follower in followers:
     followers_list.append(follower.username)
-
-following_list = []
-followings = profile.get_followees()
-for following in followings:
-    following_list.append(following.username)
 
 
 cl = Client()
@@ -32,6 +27,7 @@ real_followers = []
 faked_followers = []
 percent = 0
 for i in followers_list:
+    print(i)
     dict=cl.user_info_by_username(i).dict()
     if (dict["is_verified"] == True):
         real_followers.append(i)
@@ -72,4 +68,5 @@ for i in followers_list:
             print("\n\n\n")
         except:
             pass
+    print(percent)
     break

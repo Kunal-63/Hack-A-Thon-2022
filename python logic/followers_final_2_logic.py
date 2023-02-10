@@ -3,7 +3,7 @@ from datetime import datetime
 from instagrapi import Client
 L = instaloader.Instaloader()
 
-profile = instaloader.Profile.from_username(L.context, "_kunaladwani_")
+profile = instaloader.Profile.from_username(L.context, "")
 L.login("imop690", "#imop690")
 
 followers = profile.get_followers()
@@ -19,3 +19,7 @@ for following in followings:
 
 cl = Client()
 cl.login("imop690", '#imop690')
+
+real_followers = []
+faked_followers = []
+

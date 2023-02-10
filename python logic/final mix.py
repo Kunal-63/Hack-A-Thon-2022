@@ -37,6 +37,7 @@ cl.login("imop690", '#imop690')
 
 
 real_followers = []
+faked_followers = []
 for i in followers_list:
     dict=cl.user_info_by_username(i).dict()
     if (dict["is_verified"] == True):
@@ -81,6 +82,13 @@ for i in followers_list:
             pass
     break
 
+
+#====================================================================================================================
+#====================================================================================================================
+#====================================================================================================================
+
+real_following = []
+faked_following = []
 for j in following_list:
     dict=cl.user_info_by_username(j).dict()
     if (dict["is_verified"] == True):

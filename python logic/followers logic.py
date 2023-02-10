@@ -1,27 +1,40 @@
 import instaloader
 from datetime import datetime
 from instagrapi import Client
-
 L = instaloader.Instaloader()
-profile = instaloader.Profile.from_username(L.context, "fakelightning1")
-real = 0
 
-L.login("first_102030", "first_ig123")
+profile = instaloader.Profile.from_username(L.context, "_kunaladwani_")
+L.login("imop690", "#imop690")
 
 followers = profile.get_followers()
 followers_list = []
 for follower in followers:
     followers_list.append(follower.username)
-# print(len(followers_list))
+
+following_list = []
+followings = profile.get_followees()
+for following in followings:
+    following_list.append(following.username)
+
+
+cl = Client()
+cl.login("imop690", '#imop690')
+
+
+
+#====================================================================================================================
+#====================================================================================================================
+#====================================================================================================================
+
+
+
 real_followers = []
 faked_followers = []
-cl = Client()
-cl.login("first_102030", 'first_ig123')
+percent = 0
 for i in followers_list:
     dict=cl.user_info_by_username(i).dict()
     if (dict["is_verified"] == True):
         real_followers.append(i)
-        print(real_followers)
     else:
         try:
             profile = instaloader.Profile.from_username(L.context, i)
@@ -32,30 +45,30 @@ for i in followers_list:
             timestamp2 = datetime.fromtimestamp(post2.date_local.timestamp())
             duration = timestamp2 - timestamp1
             print(abs(duration.days)," days")
-            if(abs(duration.days) >= 2):
-                real += 1
+            if abs(duration.days) <= 1:
+                percent +=  0.2               
         except:
             pass 
         try:
-            # print("private",dict["is_private"])
             if dict["is_private"] == False:
                 pass
             else:
-                real += 1
+                pass
+
+
             follower_following_ratio = int(dict['following_count']) / int(dict['follower_count'])
             if (follower_following_ratio < 2):
-                real += 1
-            # print("follower count",dict["follower_count"])
-            # print("following count",dict["following_count"])
+                pass
+
+
             if int(dict["media_count"] < 15):
-                real += 1
-            # print("media count",dict["media_count"])
+                pass
+
+
             if (dict["biography"] == None):
-                    pass
-            else:
-                real +=1
-            # print("biography ",dict["biography"])
-            print(real/5)
+                    percent += 0.2
+            
+
             print("\n\n\n")
         except:
             pass

@@ -21,7 +21,7 @@ cl.login(username, password)
 
 real_following = []
 prob_real_following = []
-faked_following = []
+fake_following = []
 prob_fake_following = []
 for j in following_list:
     percent = 0
@@ -92,7 +92,7 @@ for j in following_list:
         except:
             pass
     if (percent >= 0.6):
-        faked_following.append(j)
+        fake_following.append(j)
     elif (percent >= 0.5 and percent < 0.6):
         prob_fake_following.append(j)
     elif (percent < 0.5 and percent <= 0.35):

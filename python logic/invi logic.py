@@ -20,7 +20,7 @@ cl.login(username1, password1)
 
 real_following = []
 prob_real_following = []
-faked_following = []
+fake_following = []
 prob_fake_following = []
 percent = 0
 dict=cl.user_info_by_username(account_name1).dict()
@@ -90,10 +90,10 @@ else:
     except:
         pass
 if (percent >= 0.6):
-    faked_following.append(account_name1)
+    print(account_name1, "is fake")
 elif (percent >= 0.5 and percent < 0.6):
-    prob_fake_following.append(account_name1)
+    print(account_name1, "is probl fake")
 elif (percent < 0.5 and percent <= 0.35):
-    prob_real_following.append(account_name1)
+    print(account_name1, "is probl real")
 elif (percent < 0.35):
-    real_following.append(account_name1)
+    print(account_name1,"is real")

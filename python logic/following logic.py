@@ -19,7 +19,9 @@ cl.login("fourth12342023", 'fourth_1234')
 #====================================================================================================================
 
 real_following = []
+prob_real_following = []
 faked_following = []
+prob_fake_following = []
 for j in following_list:
     percent = 0
     dict=cl.user_info_by_username(j).dict()
@@ -34,7 +36,6 @@ for j in following_list:
             timestamp1 = datetime.fromtimestamp(post1.date_local.timestamp())
             timestamp2 = datetime.fromtimestamp(post2.date_local.timestamp())
             duration = timestamp2 - timestamp1
-            print(abs(duration.days)," days")
             if (abs(duration.days) == 1):
                 percent +=  0.2
 
@@ -86,4 +87,11 @@ for j in following_list:
             
         except:
             pass
-    print(j," : ", percent)
+    if (percent >= 0.6):
+        faked_following.append(j)
+    elif (percent >= 0.5 and percent < 0.6):
+        prob_fake_following.append(j)
+    elif (percent < 0.5 and percent <= 0.35):
+        prob_real_following.append(j)
+    elif (percent < 0.35):
+        real_following.append(j)

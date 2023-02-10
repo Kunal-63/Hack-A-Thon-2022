@@ -63,7 +63,9 @@ for j in following_list:
                 percent += 0.1
             else:
                 percent += 0.05
-
+        except:
+            pass
+        try:
             follower_following_ratio = int(dict['follower_count']) / int(dict['following_count'])
             if (follower_following_ratio >= 0.5):
                 percent += 0.05
@@ -71,8 +73,10 @@ for j in following_list:
                 percent += 0.1
             elif (follower_following_ratio < 0.33):
                 percent += 0.2
-
-
+        except:
+            pass
+            
+        try:
             media_follower_ratio = int(dict["media_count"]) / int(dict["follower_count"])
             if (media_follower_ratio >= 0.5):
                 percent += 0.05
@@ -80,12 +84,11 @@ for j in following_list:
                 percent += 0.1
             elif (media_follower_ratio > 1):
                 percent += 0.2
-
-
+        except:
+            pass
+        try:
             if (dict["biography"] == None) or (len(dict["biography"]) >= 125):
                     percent += 0.2
-
-            
         except:
             pass
     if (percent >= 0.6):
